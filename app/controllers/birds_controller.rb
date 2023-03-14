@@ -16,4 +16,11 @@ class BirdsController < ApplicationController
     end
   end
 
+  # POST /birds
+  def create
+    # byebug
+    bird = Bird.create(name: "Monk Parakeet", species: "species")
+    render json: bird, status: :created
+  end  
+
 end
